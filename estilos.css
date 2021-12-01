@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: roboto;
+}
+
+.alto {
+    height: 100vh;
+}
+
+.container {
+    background-color: rgb(224, 212, 195);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    height: 125px;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    align-items: center;
+}
+
+.header ul {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li {
+    display: inline-block;
+}
+
+.principal {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.principal img {
+    height: 100vh;
+}
+
+.novedades {
+    height: 90vh;
+    width: 100vw;
+    background-color: rgb(224, 212, 195);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.novedades img {
+    height: 450px;
+    margin: 0px 20px 0px 20px;
+}
+
+.novedadesTxt {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.descripcion {
+    width: 100vw;
+    height: 90vh;
+    background-image: url(img/descripcion.jpg);
+    position: relative;
+}
+
+.descripcion div {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(40, 40, 40, 0.8);
+    color: white;
+    padding: 5px;
+}
+
+.shopGrid {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(2, 250px);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.shopGrid div {
+    background-image: linear-gradient(rgba(40, 40, 40, 0.5), rgba(40, 40, 40, 0));
+}
+
+.galeriaGrid {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(4, 250px);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.gridItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gridItem img {
+    width: 250px;
+    border: solid white 5px;
+    box-shadow: 0px 0px 12px 2px rgba(0,0,0,1);
+}
+
+.gridItem img:hover {
+    transform: scale(2,2);
+    z-index: 10;
+}
+
+.biografia {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background-color: rgb(179, 142, 107);
+}
+
+.biografia div {
+    color: white;
+}
+
+.biografia img {
+    width: 500px;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.biografia p {
+    padding: 5px;
+}
+
+/* 
+.formulario {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+} */
+
+.formulario {
+    background-color: rgb(179, 142, 107);
+    padding: 50px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px 0px;
+}
+/* 
+form {
+    display: flex;
+} */
+
+.footer {
+    height: 75px;
+    width: 100vw;
+    background-color: rgb(40, 40, 40);
+    color: rgb(230, 230, 230);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.activo {
+    color: rgb(179, 142, 107);
+}
+
+a:hover {
+    color: rgb(179, 142, 107);
+}
+
+h1:hover {
+    color: rgb(179, 142, 107)
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .alto {
+        height: auto;
+    }
+
+    .principal {
+        flex-direction: column;
+    }
+
+    .novedades {
+        flex-direction: column;
+    }
+
+    .descripcion div {
+        right: 0px;
+    }
+
+    .shopGrid {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: grid;
+        grid-template-columns: 250px;
+        grid-template-rows: repeat(6, 250px);
+    }
+
+    .galeriaGrid {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: grid;
+        grid-template-columns: 250px;
+        grid-template-rows: repeat(12, 250px);
+    }
+
+    .biografia {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    .biografia img {
+        height: 500px;
+        width: auto;
+    }
+
+    .formulario {
+        height: 100vh;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+  }
